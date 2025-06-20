@@ -47,7 +47,7 @@ This extension uses the following permissions:
 - `notifications`: Show break reminders after 30-minute intervals
 - `alarms`: Schedule background checks for reminders
 
-📃 [View full privacy policy](https://your-username.github.io/tab-time-tracker/privacy-policy)
+📃 [View full privacy policy](https://github.com/imhiteshgarg/tab_time_tracker/blob/main/privacy_policy.md)
 
 ---
 
