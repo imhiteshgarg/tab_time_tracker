@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Time Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #1e1e2f;
+            color: #ffffff;
+            width: 240px;
+            height: 200px;
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 16px;
+            margin: 0 0 6px 0;
+            color: #00f6ff;
+        }
+
+        #domain {
+            font-size: 13px;
+            opacity: 0.85;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        #timer {
+            font-size: 26px;
+            font-weight: bold;
+            background: linear-gradient(to right, #00f6ff, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        footer {
+            font-size: 10px;
+            opacity: 0.4;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #00f6ff;
+            color: #1e1e2f;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #4facfe;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        input[type="checkbox"] {
+            accent-color: #00f6ff;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #444a6d;
+            transition: .3s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background: #00f6ff;
+            transition: .3s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background: #00f6ff;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(20px);
+            background: #1e1e2f;
+        }
+
+        .toggle-label {
+            margin-left: 0;
+            font-size: 11px;
+            color: #fff;
+            opacity: 0.75;
+            white-space: nowrap;
+        }
+    </style>
+    <script src="popup.js" defer></script>
+</head>
+
+<body>
+    <h2 id="heading">Time on ...</h2>
+    <div id="timer">0s</div>
+    <button id="reset-timer-btn">Reset Timer</button>
+    <label style="margin-top:10px;">
+        <span class="toggle-label">Disable timer for this website</span>
+        <span class="switch">
+            <input type="checkbox" id="disable-timer-toggle">
+            <span class="slider"></span>
+        </span>
+    </label>
+    <footer>⏱️ Tab Time Tracker</footer>
+</body>
+
+</html>
